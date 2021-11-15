@@ -9,7 +9,7 @@ require('dotenv').config()
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-app.use('/api/library',require('./Ruote/server'));
+app.use('/api/library',require('./Ruote/booksRoute'));
 
 
 
