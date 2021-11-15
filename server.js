@@ -11,10 +11,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use('/api/library',require('./Ruote/server'));
 
-//mongoose.connect(`mongodb+srv://${process.env.DB_URL}/myData?retryWrites=true&w=majority`,{ useNewUrlParser: true })
 
 
-mongoose.connect('mongodb+srv://sahrj:omri@sahr2@cluster0.rlcnq.mongodb.net/library?retryWrites=true&w=majority', () => {
+mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true }, () => {
 console.log('Connected to DB');
 });
 
