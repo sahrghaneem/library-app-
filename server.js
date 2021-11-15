@@ -17,4 +17,4 @@ mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology:
 console.log('Connected to DB');
 });
 
-app.listen(5001);
+app.listen(process.env.PORT||5001);
