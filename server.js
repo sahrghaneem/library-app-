@@ -13,7 +13,7 @@ app.use('/api/library',require('./Ruote/server'));
 
 
 
-mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true }, () => {
+mongoose.connect(process.env.DB_URL, () => {
 console.log('Connected to DB');
 });
 
