@@ -3,12 +3,12 @@ const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
-const bookController=require('../controller/bookController');
+const bookController=require('./controller/bookController');
 
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-app.use('/api/library',require('../Ruote/server'));
+app.use('/api/library',require('./Ruote/server'));
 
 
 
